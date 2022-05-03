@@ -8,6 +8,7 @@ const geocode = require('./utils/geocode')
 console.log(__dirname)
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //Aqui alteramos la ruta del directorio para entrar a la carpeta public y acceder a los documentos html
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -127,6 +128,6 @@ app.get('*',(req, res) => {
 
 
 //Inicializamos el servidor 3000
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
