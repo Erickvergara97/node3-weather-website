@@ -5,7 +5,6 @@ const hbs = require('hbs')
 const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 
-console.log(__dirname)
 
 const app = express()
 const port = process.env.PORT || 3000
